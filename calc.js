@@ -1,19 +1,15 @@
 var btns = document.getElementsByTagName("button");
-var calc = document.getElementById("calc");
+var calcInput = document.getElementById("calc-input");
 
 for (var thisBtn of btns) {
     thisBtn.addEventListener('click', function() {
+        // For "="
         if (this.innerHTML == "=")
-        calc.value = eval(calc.value);
+        calcInput.value = eval(calcInput.value);
+        // For "C" (clear)
         else if (this.innerHTML == "C")
-        calc.value = "";
+        calcInput.value = "";
         else
-        calc.value += this.innerHTML;
+        calcInput.value += this.innerHTML;
     });
-}
-                        
-                        
-                   
-                
-                    
-            
+}            
